@@ -1,10 +1,9 @@
-import express from 'express';
-import authRouter from './routes/authRoute.js';
+import dotenv from 'dotenv';
+dotenv.config()
 
 const PORT = process.env.PORT || 3000
 
-const app = express()
-app.use("/signup",authRouter)
+import app from './app.js'
 
 app.listen(PORT,()=>{
     console.log(`Server is running on PORT ${PORT}`)
